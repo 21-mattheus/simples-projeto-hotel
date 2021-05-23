@@ -21,7 +21,7 @@ use App\Http\Controllers\CadastrarController;
 |
 */
 
-Route::get('/inicio', [InicioController::class, 'inicio'])
+Route::get('inicio', [InicioController::class, 'inicio'])
 ->name('inicio.index');
 
 
@@ -36,7 +36,6 @@ Route::post('/logar', [LoginController::class, 'logar'])
 Route::get('/logout', [LoginController::class, 'logout'])
 ->name('logout');
 
-
 Route::get('/cadastrar', [CadastrarController::class, 'cadastrar'])
 ->name('cadastrar');
 
@@ -45,15 +44,15 @@ Route::post('/cadastrado', [CadastrarController::class, 'cadastrado'])
 ->name('cadastrado');
 
 
-Route::get('/data', [DataController::class, 'data'])
+Route::get('/data', [DataController::class, 'data'])->middleware('login')
 ->name('data.index');
 
 
-Route::get('/quartos', [QuartosController::class, 'quartos'])
+Route::get('/quartos', [QuartosController::class, 'quartos'])->middleware('login')
 ->name('quartos.index');
 
 
-Route::get('/pagamento', [PagamentoController::class, 'pagamento'])
+Route::get('/pagamento', [PagamentoController::class, 'pagamento'])->middleware('login')
 ->name('pagamento.index');
 
 

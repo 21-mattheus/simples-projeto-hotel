@@ -30,6 +30,7 @@ body {
     padding: 40px;
     background: #ff7846;
     color: #fff;
+    cursor: pointer;
 }
 
 h1 {

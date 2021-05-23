@@ -12,21 +12,26 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function logar(Request $r){
+    public function logar(Request $request){
 
-        $request->validate([
-            'email' => 'required',
-            'senha' => 'required'
-        ]);
+       // $request->validate([
+       //     'email' => 'required',
+       //     'senha' => 'required'
+       // ]);
 
-        if($r->email == 'matheus@matheus.com' && $r->senha == '2121')
+        if($request->email == 'matheus@matheus.com' && $request->senha == '2121')
+
+            session(['seuNome' => $request->email]);
+
             return redirect()->route('data.index');
-        else
-            return redirect()->back()->with('erro', 'Login ou senha inválidos.');
+
+            // }return redirect()->back()->with('erro', 'Login ou senha inválidos.');
     }
 
-    public function logout(){
-        return view('login');
+    public function logout(Request $request){
+        session()->flush();
+        return redirect()->route('inicio.index');
+        //return view('login');
     }
 
 }

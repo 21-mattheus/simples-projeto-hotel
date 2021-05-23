@@ -19,6 +19,7 @@
                     <li><a href="sociais">Sociais</a></li>
                     <li><a href="sobre">Sobre</a></li>
                     <li><a href="atividades">Atividades</a></li>
+                    <li><a href="inicio">Sair</a></li>
                 </ul>
             </nav>
             <img src="img/menu.png" class="menu-icon">

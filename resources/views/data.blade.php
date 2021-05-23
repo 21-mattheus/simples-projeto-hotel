@@ -13,6 +13,9 @@
 <body>
     <div class="container">
         <h1>Reserva</h1>
+
+        <h2>Olá! {{session('seuNome')}}, Bem-Vindo!</h2> <br>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Sed do eiusmod tempor incididunt ut labore et dolore magna </p>
 
         <div class="pag-box">
@@ -62,6 +65,10 @@
                     <tr>
                         <td>Telefone:</td>
                         <td>(00) 00000-0000</td>
+                    </tr>
+
+                    <tr>
+                        <td><h3><a href="{{route('logout')}}">Sair</a></h3></td>
                     </tr>
 
                 </table>
