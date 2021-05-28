@@ -9,6 +9,7 @@ use App\Http\Controllers\PagamentoController;
 use App\Http\Controllers\AtividadesController;
 use App\Http\Controllers\SobreController;
 use App\Http\Controllers\CadastrarController;
+use App\Models\Cadastro;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,28 @@ use App\Http\Controllers\CadastrarController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('teste', function(){
+
+//   Cadastro::create(['nome' => 'Matheus']);
+//   Cadastro::create(['email' => '@matheus.com']);
+//   Cadastro::create(['cpf' => '111.111.111-11']);
+//   Cadastro::create(['senha' => 'matheus']);
+
+
+    $cadastro = new Cadastro();
+
+    $cadastro->nome = 'Matheus';
+    $cadastro->email = 'matheus@matheus.com';
+    $cadastro->cpf = '111.111.111-11';
+    $cadastro->senha = 'matheus';
+
+    $cadastro->save();
+
+    echo 'ok';
+
+});
 
 Route::get('inicio', [InicioController::class, 'inicio'])
 ->name('inicio.index');

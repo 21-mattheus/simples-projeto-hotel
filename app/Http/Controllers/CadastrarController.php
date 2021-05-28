@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cadastro;
 use Illuminate\Http\Request;
 
 class CadastrarController extends Controller
@@ -12,7 +13,7 @@ class CadastrarController extends Controller
         return view('data');
     }
 
-    public function cadastrado(){
+    public function cadastrado(Request $request){
 
         $request->validate([
             'nome' => 'required',
@@ -21,6 +22,17 @@ class CadastrarController extends Controller
             'senha' => 'required'
         ]);
 
+        $cadastro = new Cadastro();
+        $cadastro->nome = $request->nome;
+        $cadastro->email = $request->email;
+        $cadastro->cpf = $request->cpf;
+        $cadastro->senha = $request->senha;
+        $cadastro->save();
+
         return redirect()->route('data.index');
+
+//       print_r($request->all());die;
+//       Cadastro::create($request->all());
+
     }
 }

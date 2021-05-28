@@ -34,5 +34,19 @@ class LoginController extends Controller
         //return view('login');
     }
 
+
+//    public function cadastrar(Request $request){
+//
+//        $request->validate([
+//            'nome' => 'required',
+//            'email' => 'required',
+//            'cpf' => 'required',
+//            'senha' => 'required'
+//        ]);
+
+//        return redirect()->route('data.index');
+//    }
 }
+
+
 
