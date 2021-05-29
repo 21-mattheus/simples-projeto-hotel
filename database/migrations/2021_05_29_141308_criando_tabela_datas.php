@@ -15,9 +15,9 @@ class CriandoTabelaDatas extends Migration
     {
         Schema::create('datas', function (Blueprint $table) {
             $table->id();
-            $table->date('chegada');
-            $table->date('saida');
-            $table->integer('quantidadeHospedes');
+            $table->string('chegada');
+            $table->string('saida');
+            $table->string('quantidadeHospedes');
             $table->timestamps();
         });
     }

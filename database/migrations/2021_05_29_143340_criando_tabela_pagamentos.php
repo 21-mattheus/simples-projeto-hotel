@@ -17,8 +17,8 @@ class CriandoTabelaPagamentos extends Migration
             $table->id();
             $table->string('nome');
             $table->string('nome_do_cartao');
-            $table->integer('numero_do_cartao');
-            $table->date('validade_do_cartao');
+            $table->string('numero_do_cartao');
+            $table->string('validade_do_cartao');
             $table->timestamps();
         });
     }

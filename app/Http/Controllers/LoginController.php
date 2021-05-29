@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Login;
 use Illuminate\Http\Request;
 
 
@@ -14,16 +16,22 @@ class LoginController extends Controller
 
     public function logar(Request $request){
 
-       // $request->validate([
-       //     'email' => 'required',
-       //     'senha' => 'required'
-       // ]);
+        $request->validate([
+            'email' => 'required',
+            'senha' => 'required'
+        ]);
 
         if($request->email == 'matheus@matheus.com' && $request->senha == '2121')
 
             session(['seuNome' => $request->email]);
 
+            $login = new Login();
+            $login->email = $request->email;
+            $login->senha = $request->senha;
+            $login->save();
+
             return redirect()->route('data.index');
+
 
             // }return redirect()->back()->with('erro', 'Login ou senha inválidos.');
     }
@@ -31,6 +39,8 @@ class LoginController extends Controller
     public function logout(Request $request){
         session()->flush();
         return redirect()->route('inicio.index');
+
+
         //return view('login');
     }
 

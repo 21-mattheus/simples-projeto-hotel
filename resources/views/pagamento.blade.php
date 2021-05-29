@@ -25,12 +25,12 @@
 
                         <div class="input-group">
                             <label>Nome</label>
-                            <input type="text" placeholder="Nome">
+                            <input type="text" name="nome" placeholder="Nome">
                         </div>
 
                         <div class="input-group">
                             <label>Nome do Cartão</label>
-                            <input type="text" placeholder="Nome do Cartão">
+                            <input type="text" name="nome_do_cartao" placeholder="Nome do Cartão">
                         </div>
 
                     </div>
@@ -39,12 +39,12 @@
 
                         <div class="input-group">
                             <label>Número do Cartão</label>
-                            <input type="text" placeholder="Número do Cartão">
+                            <input type="text" name="numero_do_cartao" placeholder="Número do Cartão">
                         </div>
 
                         <div class="input-group">
                             <label>Válidade</label>
-                            <input type="date" placeholder="Válidade">
+                            <input type="text" name="validade_do_cartaos" placeholder="Válidade">
                         </div>
 
                     </div>

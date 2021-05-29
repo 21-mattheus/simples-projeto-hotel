@@ -28,12 +28,12 @@
 
                         <div class="input-group">
                             <label>Data de chegada</label>
-                            <input type="date" placeholder="Data de chegada">
+                            <input type="text" name="chegada" placeholder="Data de chegada">
                         </div>
 
                         <div class="input-group">
                             <label>Data de saída</label>
-                            <input type="date" placeholder="Data de saída">
+                            <input type="text" name="saida" placeholder="Data de saída">
                         </div>
 
                     </div>
@@ -42,7 +42,7 @@
 
                         <div class="input-group">
                             <label>Números de Hospede</label>
-                            <input type="number" placeholder="Número de Hospede">
+                            <input type="text"  name="quantidadeHospedes" placeholder="Número de Hospede">
                         </div>
 
                     </div>
