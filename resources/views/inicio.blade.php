@@ -56,6 +56,20 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+    </script>
+    <script>
+        (function () {
+            window.onload = function () {
+                new BlipChat()
+                .withAppKey('cHJvamV0b2hvdGVsOjMzYWNlOGUyLTEzMmYtNDVkNy05MWIyLWJhZGQ1MWQ1YTJmNw==')
+                .withButton({"color":"#ff7846;","icon":""})
+                .withCustomCommonUrl('https://chat.blip.ai/')
+                .build();
+            }
+    })();
+    </script>
+
 </body>
 
 </html>
